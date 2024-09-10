@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&family=Poppins:wght@200;300;400;500;700&display=swap");
+:root {
+  --primaryColor:hsl(14,90%,53%)
+  --primaryColorLight:hsl(14 , 96% , 91%);
+  --bgColor:hsl(0,0%,100%);
+  --formColor:hsl(20 , 42%, 87%);
+  --whiteColor:hsl(0,0%,100%);
+  --blackColor:hsl(0,0%,18%);
+  --greyText:hsl(0,0%,51%);
+  --inputColor:hsl(330,12%,97%);
+  --cardColor:hsl(300,3%,94%);
+  --biggestFontSize:2.5rem;
+  --h1FontSize:2rem;
+  --h2Fontsize:1.25rem;
+  --h3Fontsize:1rem;
+  --normalFontsize:0.938rem;
+  --smallFontsize:0.813rem;
+  --borderRadius:3rem;
+}
+
+.accordionContainer .title {
+  font-size: var(--normalFontsize);
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  justify-content: space-between;
+  background: hsl(14, 96%, 91%);
+}
+.accordionContainer .title span {
+  cursor: pointer;
+}
+.accordionContainer .title span .icon {
+  font-size: 1.2rem;
+  color: var(--blackColor);
+}
+.accordionContainer .description {
+  font-size: var(--smallFontsize);
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+  white-space: pre-line;
+  height: 0;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  padding: 0 1rem;
+  background: var(--cardColor);
+  border-radius: 0 0 10px 10px;
+  color: var(--blackColor);
+}
+.accordionContainer .show {
+  height: 140px;
+  opacity: 1;
+}
+.accordionContainer .activeTitle {
+  background: hsl(14, 96%, 91%);
+  border-radius: 10px 10px 0 0;
+}
+
+.questions .secHeading h3, .questions .secHeading h4 {
+  padding-bottom: 1.5rem;
+}
+.questions .secHeading p {
+  font-size: var(--smallFontsize);
+  color: var(--blackColor);
+  padding-bottom: 1rem;
+}
+.questions .form .formContent {
+  gap: 1rem;
+}
+.questions .form .formContent input, .questions .form .formContent textarea {
+  background: var(--cardColor);
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  outline: none;
+  border-radius: var(--borderRadius);
+}
+.questions .form .formContent input::-moz-placeholder, .questions .form .formContent textarea::-moz-placeholder {
+  font-size: var(--smallFontsize);
+  color: var(--blackColor);
+}
+.questions .form .formContent input::placeholder, .questions .form .formContent textarea::placeholder {
+  font-size: var(--smallFontsize);
+  color: var(--blackColor);
+}
+.questions .form .formContent .textarea {
+  height: 100px;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 640px) {
+  .accordionContainer .title {
+    font-size: var(--h3Fontsize);
+  }
+  .accordionContainer .title span .icon {
+    font-size: 1.5rem;
+  }
+  .accordionContainer .description {
+    font-size: var(--normalFontsize);
+  }
+  .accordionContainer .show {
+    height: 150px;
+  }
+  .questions .secHeading h3, .questions .secHeading h4 {
+    font-size: var(--h2Fontsize);
+  }
+  .questions .secHeading p {
+    font-size: var(--normalFontsize);
+  }
+  .questions .secContainer {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .questions .secContainer .form .formContent input, .questions .secContainer .form .formContent textarea {
+    font-size: var(--normalFontsize);
+  }
+  .questions .secContainer .form .formContent input::-moz-placeholder, .questions .secContainer .form .formContent textarea::-moz-placeholder {
+    font-size: var(--normalFontsize);
+    color: var(--blackColor);
+  }
+  .questions .secContainer .form .formContent input::placeholder, .questions .secContainer .form .formContent textarea::placeholder {
+    font-size: var(--normalFontsize);
+    color: var(--blackColor);
+  }
+  .questions .secContainer .form .formContent textarea {
+    height: 100px;
+    border-radius: 10px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .accordionContainer .title {
+    font-size: var(--h3Fontsize);
+  }
+  .accordionContainer .title h3 .icon {
+    font-size: 1.5rem;
+  }
+  .accordionContainer .description {
+    font-size: var(--normalFontsize);
+  }
+  .accordionContainer .show {
+    height: 150px;
+  }
+  .questions .secHeading h3, .questions .secHeading h4 {
+    font-size: 1.5rem;
+  }
+  .questions .secHeading p {
+    font-size: var(--h3Fontsize);
+  }
+  .questions .secContainer {
+    gap: 3rem;
+  }
+}/*# sourceMappingURL=Question.css.map */

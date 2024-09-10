@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&family=Poppins:wght@200;300;400;500;700&display=swap');
+
+
+:root{
+    --primaryColor:hsl(14,90%,53%)
+    --primaryColorLight:hsl(14 , 96% , 91%);
+    --bgColor:hsl(0,0%,100%);
+    --formColor:hsl(20 , 42%, 87%);
+    --whiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(0,0%,18%);
+    --greyText:hsl(0,0%,51%);
+    --inputColor:hsl(330,12%,97%);
+    --cardColor:hsl(300,3%,94%);
+
+    // Font ang Typography
+    --biggestFontSize:2.5rem;
+    --h1FontSize:2rem;
+    --h2Fontsize:1.25rem;
+    --h3Fontsize:1rem;
+    --normalFontsize:0.938rem;
+    --smallFontsize:0.813rem;
+    --borderRadius:3rem;
+}
+
+
+.review{
+
+
+    .secContainer{
+
+        .textDiv{
+
+            .redText{
+                font-weight: var(--smallFontsize);
+                display: block;
+                font-weight: 700;
+            }
+
+            h3{
+                font-size: var(--h2Fontsize);
+                color:var(--blackColor);
+                padding: 1rem 0;
+            }
+
+            p{
+                color: var(--blackColor);
+            }
+
+            .starts{
+                gap: .4rem;
+                padding: 1rem 0;
+
+                .icon{
+                    color: var(--primaryColor);
+                    font-size: var(--h3Fontsize);
+                }
+            }
+
+            .clientsImage{
+                gap: 1rem;
+
+                img{
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid rgb(255,255,255);
+                    box-shadow: 0 0 2px 2px rgb(251, 212, 194);
+                }
+            }
+        }
+
+        .imgDiv{
+            height: 250px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img{
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:480px) {
+    .review{
+        .secContainer{
+            .textDiv{
+                .redText{
+                    font-size: var(--normalFontsize);
+
+                }
+                h3{
+                    font-size: 20px;
+                    color: var(--blackColor);
+                }
+                p{
+                    color: var(--blackColor);
+                    font-size: var(--normalFontsize);
+                }
+
+                .starts{
+                    .icon{
+                        font-size: var(--h2Fontsize);
+                    }
+                }
+
+                .clientsImage{
+                    img{ 
+                    height: 50px;
+                    width: 50px;
+                    }
+                }
+
+                .imgDiv{
+                    height: 250px;
+                    width: 100px;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media screen and (min-width:740px){
+    .review{
+        .secContainer{
+            grid-template-columns: repeat(2,1fr);
+
+            .textDiv{
+                .redText{
+                    font-size: var(--normalFontsize);
+                }
+
+                h3{
+                    font-size: 20px;
+                    color: var(--normalFontsize);
+                }
+
+                p{
+                    color: var(--blackColor);
+                    font-size: var(--normalFontsize);
+                }
+
+                .starts{
+                    .icon{
+                        font-size: var(--h2Fontsize);
+                    }
+                }
+
+                .clientsImage{
+                    img{
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width:1240px){
+        .review{
+            .secContainer{
+                gap: 3rem;
+
+                .textDiv{
+                    .redText{
+                        font-size: var(--h3Fontsize);
+
+                    }
+
+                    h3{
+                        font-size: var(--h1FontSize);
+                        color: var(--blackColor);
+                    }
+
+                    p{
+                        color: var(--blackColor);
+                        font-size: var(--h3Fontsize);
+                        line-height: 2rem;
+                    }
+                }
+                .imgDiv{
+                    height: 300px;
+                }
+            }
+        }
+}

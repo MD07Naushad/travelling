@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700;900&family=Poppins:wght@200;300;400;500;700&display=swap');
+
+
+:root{
+    --primaryColor:hsl(14,90%,53%)
+    --primaryColorLight:hsl(14 , 96% , 91%);
+    --bgColor:hsl(0,0%,100%);
+    --formColor:hsl(20 , 42%, 87%);
+    --whiteColor:hsl(0,0%,100%);
+    --blackColor:hsl(0,0%,18%);
+    --greyText:hsl(0,0%,51%);
+    --inputColor:hsl(330,12%,97%);
+    --cardColor:hsl(300,3%,94%);
+
+    // Font ang Typography
+    --biggestFontSize:2.5rem;
+    --h1FontSize:2rem;
+    --h2Fontsize:1.25rem;
+    --h3Fontsize:1rem;
+    --normalFontsize:0.938rem;
+    --smallFontsize:0.813rem;
+    --borderRadius:3rem;
+}
+
+
+
+.middle{
+    width: 100%;
+
+    .secContainer{
+        .grid{
+           padding: 3rem;
+           border-radius: var(--borderRadius);
+           background: hsl(14 , 96% , 91%);
+            justify-content: center;
+            margin: auto;
+           gap:2rem;
+        }
+
+        span{
+            justify-content: center;
+            gap: .5rem;
+
+            h1{
+                font-size: var(--h1FontSize);
+                font-weight: 700;
+                color: var(--blackColor);
+            }
+
+            p{
+                opacity: .8;
+                max-width: 80px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:480px) {
+    .middle{
+        .secContainer{
+            .grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:640px) {
+    .middle{
+        .secContainer{
+            .grid{
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    }
+}
+
+@media screen and (min-width:800px) {
+    .middle{
+        .secContainer{
+            .grid{
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
+
